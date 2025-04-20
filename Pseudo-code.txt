@@ -1,0 +1,45 @@
+01 START:
+02 FRAME 1: initializes everything
+03 StartButton.click()
+04   hide frame 1 buttons; 
+05   if(UserName)
+06     greet the user as “Apache Helicopter”;
+07   else
+08     greet the user with his entered name;
+09   goto(13); // FRAME 4
+
+10 UserNameField.click()
+11   clear field; 
+12   Username = false;
+
+13 FRAME 4: loads data from txtfile.txt
+14 onLoader()
+15   split the elements in array;
+
+16 CrystalButton.click()
+17   randomize index;
+18   if(randomed == previous)
+19     goto(17);
+20   else
+21     if(index == 15)
+22       display answer[15];
+23       goto(32); // FRAME 7
+24     else if(index == randomed)
+25       goto(13); // FRAME 4
+26     else
+27       goto(17);
+
+28  MenuButton.click()
+29    hide frame 4 buttons;
+30    Username = true;
+31    goto(2); // FRAME 1
+
+32 FRAME 7: initialize sound;
+33 SpartaButton.click()
+34   hides frame 7 button;
+35   stops music;
+36   goto(13); // FRAME 4
+
+
+
+
